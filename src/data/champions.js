@@ -1,4 +1,4 @@
-const champions = [
+export const champions = [
 	{
 		id: "Aatrox",
 		name: "Aatrox",
