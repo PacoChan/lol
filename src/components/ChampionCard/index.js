@@ -3,9 +3,9 @@ import "./ChampionCard.css";
 
 function ChampionCard({ champion = champions[0] }) {
 	return (
-		<div>
+		<div className="championCard container">
 			<img src={champion.image} alt={champion.name} />
-			<h3>{champion.name}</h3>
+			<h3 className="title">{champion.name}</h3>
 		</div>
 	);
 }
