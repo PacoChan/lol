@@ -1,8 +1,16 @@
 .championCard {
+  border: 2px none none;
+  padding: 16px;
 }
 
 .championCard img {
+  padding: 16px;
 }
 
 .championCard .title {
+  color: white;
+  background-color: black;
+  margin: 0;
+  margin-top: -8px;
+  padding: 16px;
 }

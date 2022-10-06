@@ -1,0 +1,10 @@
+app {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+ChampionCard {
+  display: flex;
+  flex-direction: row;
+}
