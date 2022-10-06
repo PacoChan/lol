@@ -5,11 +5,9 @@ import { champions } from "./data/champions";
 function App() {
   return (
     <div className="App">
-      <div>
-        {champions.map((champion) => (
-          <ChampionCard champion={champion} key={champion.id} />
-        ))}
-      </div>
+      {champions.map((champion) => (
+        <ChampionCard champion={champion} key={champion.id} />
+      ))}
     </div>
   );
 }
