@@ -1,6 +1,41 @@
 .App {
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+h2 {
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  font-size: 80px;
+}
+
+p {
+  max-width: 400px;
+  padding: 0px 10%;
+  margin: 12px auto 0px;
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  line-height: 1.6;
+}
+
+.tittle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.champions {
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 0;
 }

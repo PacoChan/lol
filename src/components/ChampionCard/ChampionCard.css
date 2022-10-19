@@ -1,9 +1,10 @@
 .championCard {
   border: 2px none none;
-  width: 150px;
+  max-width: 150px;
   padding: 16px;
   display: flex;
   flex-direction: column;
+  max-width: 15%;
 }
 
 .championCard img {
