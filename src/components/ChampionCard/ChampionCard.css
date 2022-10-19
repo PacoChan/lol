@@ -1,10 +1,9 @@
 .championCard {
   border: 2px none none;
-  max-width: 150px;
   padding: 16px;
   display: flex;
   flex-direction: column;
-  max-width: 15%;
+  justify-content: center;
 }
 
 .championCard img {
@@ -17,4 +16,36 @@
   margin: 0;
   margin-top: -8px;
   padding: 16px;
+}
+
+.championCardList {
+  display: flex;
+  flex-direction: row;
+
+  border: 0px none none;
+  background-color: cadetblue;
+}
+
+.championCardList h1,
+.championCardList h2,
+.championCardList h3 {
+  font-size: 20px;
+  max-width: 40vw;
+  margin: 0;
+  border: 2px solid black;
+}
+
+.championCardList h1 {
+  margin-top: 16px;
+}
+
+.randomChampion {
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.role {
+  border: 2px solid black;
+  font-size: 25px;
+  flex: 1;
 }

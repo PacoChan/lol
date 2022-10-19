@@ -7,19 +7,19 @@
   margin: 0;
 }
 
-h1,
-h2 {
+.tittle h1,
+.tittle h2 {
   margin: 0;
 }
 
-h2 {
+.tittle h2 {
   font-weight: 800;
   letter-spacing: 0.03em;
   font-size: 80px;
 }
 
-p {
-  max-width: 400px;
+.tittle p {
+  max-width: 600px;
   padding: 0px 10%;
   margin: 12px auto 0px;
   font-size: 0.875rem;
@@ -38,4 +38,5 @@ p {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
