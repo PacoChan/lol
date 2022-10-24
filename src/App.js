@@ -1,11 +1,25 @@
 import ChampionCard from "./components/ChampionCard";
 import "./App.css";
-import { champions } from "./data/champions";
-import { useState } from "react";
+import { champions, getRoles } from "./data/champions";
+import { useEffect, useState } from "react";
 
 function App() {
   const [index, setIndex] = useState(0);
-  const currentChampion = champions[index];
+  const [champs, setChamps] = useState([]);
+  const [selectedRoles, setSelectedRoles] = useState([]);
+  const currentChampion = champs[index];
+  const roles = getRoles();
+
+  useEffect(() => {
+    const filteredChampions = champions.filter((champion) => {
+      for (let index = 0; index < champion.roles.length; index++) {
+        return selectedRoles.includes(champion.roles[index]);
+      }
+    });
+
+    setChamps(filteredChampions);
+  }, [selectedRoles]);
+
   return (
     <div className="App">
       <div className="tittle">
@@ -16,10 +30,29 @@ function App() {
           playstyle. Master one, or master them all.
         </p>
       </div>
-
+      {selectedRoles}
+      <div className="filterRoles">
+        {roles.map((role, index) => {
+          return (
+            <span key={role}>
+              <input
+                type={"checkbox"}
+                onChange={() => {
+                  if (selectedRoles.includes(role)) {
+                    setSelectedRoles(selectedRoles.filter((r) => r !== role));
+                  } else {
+                    setSelectedRoles([...selectedRoles, role]);
+                  }
+                }}
+              />
+              {role}
+            </span>
+          );
+        })}
+      </div>
       <button
         onClick={() => {
-          setIndex(Math.floor(Math.random() * champions.length));
+          setIndex(Math.floor(Math.random() * champs.length));
         }}
       >
         Random Champion

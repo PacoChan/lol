@@ -16,7 +16,11 @@ function ChampionCard({ champion = champions[0] }) {
         <h3>{champion.bio}</h3>
         <div style={{ display: "flex" }}>
           {champion.roles.map((role) => {
-            return <div className="role">{role}</div>;
+            return (
+              <div key={role} className="role">
+                {role}
+              </div>
+            );
           })}
         </div>
         <RatingBar title="Atteck" value={champion.info.attack} />
