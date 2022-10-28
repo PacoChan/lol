@@ -2,29 +2,44 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
   margin: 0;
+  margin-left: 64px;
 }
 
-.tittle h1,
-.tittle h2 {
+.tittle h1 {
   margin: 0;
-}
 
-.tittle h2 {
-  font-weight: 800;
-  letter-spacing: 0.03em;
-  font-size: 80px;
+  width: 443px;
+  height: 177px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 59px;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
 }
 
 .tittle p {
-  max-width: 600px;
-  padding: 0px 10%;
-  margin: 12px auto 0px;
+  width: 443px;
+  height: 94px;
+  margin: 12px 0px;
   font-size: 0.875rem;
   letter-spacing: 0.08em;
   line-height: 1.6;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 147.19%;
+}
+
+.tittle button {
+  background-color: #778bd6;
+  color: aliceblue;
+  width: 302px;
+  height: 62px;
+  margin: 12px 0px;
 }
 
 .tittle {
@@ -43,7 +58,21 @@
 
 .filterRoles {
   display: flex;
+  flex-direction: column;
   gap: 8px;
   margin: 8px 0;
   flex-wrap: wrap;
+}
+
+.appChampSty {
+  box-sizing: border-box;
+  position: absolute;
+  width: 923.82px;
+  height: 1400px;
+  left: 35vw;
+  padding-top: 100px;
+
+  background: #2d334a;
+  border: 16px solid #778bd6;
+  transform: rotate(12deg);
 }

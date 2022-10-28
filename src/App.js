@@ -23,18 +23,25 @@ function App() {
   return (
     <div className="App">
       <div className="tittle">
-        <h1>CHOOSE YOUR</h1>
-        <h2>CHAMPION</h2>
+        <h1>NO IDEA WHICH CHAMPION TO PICK?</h1>
         <p>
           With more than 140 champions, you’ll find the perfect match for your
           playstyle. Master one, or master them all.
         </p>
+
+        {selectedRoles}
+        <button
+          onClick={() => {
+            setIndex(Math.floor(Math.random() * champs.length));
+          }}
+        >
+          FIND ONE
+        </button>
       </div>
-      {selectedRoles}
       <div className="filterRoles">
         {roles.map((role, index) => {
           return (
-            <span key={role}>
+            <div key={role}>
               <input
                 type={"checkbox"}
                 onChange={() => {
@@ -46,19 +53,14 @@ function App() {
                 }}
               />
               {role}
-            </span>
+            </div>
           );
         })}
       </div>
-      <button
-        onClick={() => {
-          setIndex(Math.floor(Math.random() * champs.length));
-        }}
-      >
-        Random Champion
-      </button>
 
-      <ChampionCard champion={currentChampion} />
+      <div className="appChampSty">
+        <ChampionCard champion={currentChampion} />
+      </div>
 
       {/* <div className="champions">
         {champions.map((champion) => (

@@ -7,7 +7,10 @@
 }
 
 .championCard img {
-  /* padding: 16px; */
+  width: 180px;
+  height: 327.27px;
+
+  border-radius: 4px;
 }
 
 .championCard .title {
@@ -18,21 +21,27 @@
   padding: 16px;
 }
 
-.championCardList {
+.row {
   display: flex;
   flex-direction: row;
+}
+.championCardList {
+  display: flex;
+  flex-direction: column;
 
   border: 0px none none;
-  background-color: cadetblue;
+  background-color: black;
 }
 
 .championCardList h1,
 .championCardList h2,
 .championCardList h3 {
+  color: aliceblue;
   font-size: 20px;
   max-width: 40vw;
   margin: 0;
-  border: 2px solid black;
+  font-family: "Roboto";
+  margin: 12px 6px;
 }
 
 .championCardList h1 {
@@ -45,7 +54,19 @@
 }
 
 .role {
-  border: 2px solid black;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 12px 36px;
+  padding: 4px 2px;
+  border: 2px solid rgb(241, 145, 145);
+  background-color: rgb(241, 145, 145);
+  border-radius: 24px;
+  color: aliceblue;
   font-size: 25px;
   flex: 1;
 }
