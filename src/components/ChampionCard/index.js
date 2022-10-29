@@ -1,8 +1,7 @@
-import { champions } from "../../data/champions";
 import RatingBar from "../RatingBar";
 import "./ChampionCard.css";
 
-function ChampionCard({ champion = champions[0] }) {
+function ChampionCard({ champion }) {
   return (
     <div className=" championCardList">
       <div className="row">
