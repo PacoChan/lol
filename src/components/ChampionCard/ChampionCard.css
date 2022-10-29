@@ -8,8 +8,8 @@
 
 .championCard img {
   width: 180px;
-  height: 327.27px;
-
+  height: 350px;
+  margin-top: -100;
   border-radius: 4px;
 }
 
@@ -55,7 +55,7 @@
 
 .role {
   font-family: "Roboto";
-  font-weight: 400;
+  font-weight: 40px;
   font-size: 20px;
   line-height: 23px;
   display: flex;
@@ -67,6 +67,6 @@
   background-color: rgb(241, 145, 145);
   border-radius: 24px;
   color: aliceblue;
-  font-size: 25px;
+  font-size: 20px;
   flex: 1;
 }
