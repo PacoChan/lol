@@ -15,9 +15,7 @@ async function getChampions() {
       roles: champion.tags,
       info: champion.info,
       image:
-        "https://ddragon.leagueoflegends.com/cdn/img/champion/loading/" +
-        champion.id +
-        "_0.jpg",
+        "https://ddragon.leagueoflegends.com/cdn/img/champion/loading/" + champion.id + "_0.jpg",
     };
   });
   return champions;
@@ -51,33 +49,29 @@ function App() {
     init();
   }, []);
 
-  useEffect(() => {
-    if (selectedRoles.length > 0) {
-      const filtered = champions.filter((champion) => {
-        for (let index = 0; index < champion.roles.length; index++) {
-          return selectedRoles.includes(champion.roles[index]);
-        }
-      });
-      setFilteredChampions(filtered);
-    } else {
-      setFilteredChampions(champions);
-    }
-  }, [selectedRoles]);
-
   return (
     <div className="App">
       <div className="intro">
         <div className="tittle">
           <h1>NO IDEA WHICH CHAMPION TO PICK?</h1>
           <p>
-            With more than {champions.length} champions, you’ll find the perfect
-            match for your playstyle. Master one, or master them all.
+            With more than {champions.length} champions, you’ll find the perfect match for your
+            playstyle. Master one, or master them all.
           </p>
-
-          {selectedRoles}
           <button
             onClick={() => {
-              setIndex(Math.floor(Math.random() * filteredChampions.length));
+              if (selectedRoles.length > 0) {
+                const filtered = champions.filter((champion) => {
+                  for (let index = 0; index < champion.roles.length; index++) {
+                    return selectedRoles.includes(champion.roles[index]);
+                  }
+                });
+                setFilteredChampions(filtered);
+                setIndex(Math.floor(Math.random() * filtered.length));
+              } else {
+                setFilteredChampions(champions);
+                setIndex(Math.floor(Math.random() * champions.length));
+              }
             }}
           >
             FIND ONE
@@ -104,11 +98,7 @@ function App() {
         </div>
       </div>
       <div className="appChampSty">
-        {index == undefined ? (
-          <div>sss</div>
-        ) : (
-          <ChampionCard champion={currentChampion} />
-        )}
+        {index == undefined ? <div>sss</div> : <ChampionCard champion={currentChampion} />}
         {/* <ChampionCard champion={currentChampion} /> */}
       </div>
 
