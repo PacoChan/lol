@@ -25,10 +25,16 @@ function ChampionCard({ champion = champions[0] }) {
           </div>
         </div>
       </div>
-      <RatingBar title="Atteck" value={champion.info.attack} />
-      <RatingBar title="Defense" value={champion.info.defense} />
-      <RatingBar title="Difficulty" value={champion.info.difficulty} />
-      <RatingBar title="Magic" value={champion.info.magic} />
+      {/* TODO:  add className: flex row */}
+      {/* TODO:  add color */}
+      <div>
+        <RatingBar color="red" title="Atteck" value={champion.info.attack} />
+        <RatingBar title="Defense" value={champion.info.defense} />
+      </div>
+      <div>
+        <RatingBar title="Difficulty" value={champion.info.difficulty} />
+        <RatingBar title="Magic" value={champion.info.magic} />
+      </div>
     </div>
   );
 }

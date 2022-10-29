@@ -1,16 +1,27 @@
 .App {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
+  /* justify-content: space-between; */
   margin: 0;
-  margin-left: 64px;
+  /* margin-left: 64px; */
+  min-height: 100vh;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 400px;
+  padding: 60px;
 }
 
 .tittle h1 {
   margin: 0;
 
-  width: 443px;
-  height: 177px;
+  /* width: 443px; */
+  /* height: 177px; */
   font-family: "Roboto";
   font-style: normal;
   font-weight: 900;
@@ -21,8 +32,8 @@
 }
 
 .tittle p {
-  width: 443px;
-  height: 94px;
+  /* width: 443px; */
+  /* height: 94px; */
   margin: 12px 0px;
   font-size: 0.875rem;
   letter-spacing: 0.08em;
@@ -37,8 +48,8 @@
 .tittle button {
   background-color: #778bd6;
   color: aliceblue;
-  width: 302px;
-  height: 62px;
+  /* width: 302px; */
+  /* height: 62px; */
   margin: 12px 0px;
 }
 
@@ -46,7 +57,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
 }
 
 .champions {
@@ -65,14 +75,13 @@
 }
 
 .appChampSty {
+  flex: 1;
   box-sizing: border-box;
-  position: absolute;
-  width: 900px;
-  height: 1000px;
-  left: 40vw;
-  padding-top: 50px;
-
+  display: flex;
+  align-items: center;
   background: #2d334a;
-  border: 16px solid #778bd6;
-  transform: rotate(12deg);
+  border-left: 16px solid #778bd6;
+  /* padding-top: 100px; */
+  padding: 0 52px;
+  /* transform: rotate(12deg); */
 }
