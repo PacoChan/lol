@@ -78,6 +78,8 @@
   flex: 1;
   box-sizing: border-box;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   background: #2d334a;
   border-left: 16px solid #778bd6;

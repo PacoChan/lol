@@ -70,3 +70,14 @@
   font-size: 20px;
   flex: 1;
 }
+
+.rowBar {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+}
+
+.rowBar > div {
+  flex: 1;
+}

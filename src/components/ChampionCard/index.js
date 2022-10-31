@@ -26,13 +26,17 @@ function ChampionCard({ champion }) {
       </div>
       {/* TODO:  add className: flex row */}
       {/* TODO:  add color */}
-      <div>
+      <div className="rowBar">
         <RatingBar color="red" title="Atteck" value={champion.info.attack} />
         <RatingBar title="Defense" value={champion.info.defense} />
       </div>
-      <div>
-        <RatingBar title="Difficulty" value={champion.info.difficulty} />
-        <RatingBar title="Magic" value={champion.info.magic} />
+      <div className="rowBar">
+        <RatingBar
+          color="yellow"
+          title="Difficulty"
+          value={champion.info.difficulty}
+        />
+        <RatingBar color="pink" title="Magic" value={champion.info.magic} />
       </div>
     </div>
   );

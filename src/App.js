@@ -15,7 +15,9 @@ async function getChampions() {
       roles: champion.tags,
       info: champion.info,
       image:
-        "https://ddragon.leagueoflegends.com/cdn/img/champion/loading/" + champion.id + "_0.jpg",
+        "https://ddragon.leagueoflegends.com/cdn/img/champion/loading/" +
+        champion.id +
+        "_0.jpg",
     };
   });
   return champions;
@@ -55,8 +57,8 @@ function App() {
         <div className="tittle">
           <h1>NO IDEA WHICH CHAMPION TO PICK?</h1>
           <p>
-            With more than {champions.length} champions, you’ll find the perfect match for your
-            playstyle. Master one, or master them all.
+            With more than {champions.length} champions, you’ll find the perfect
+            match for your playstyle. Master one, or master them all.
           </p>
           <button
             onClick={() => {
@@ -97,17 +99,39 @@ function App() {
           })}
         </div>
       </div>
+
       <div className="appChampSty">
-        {index == undefined ? <div>sss</div> : <ChampionCard champion={currentChampion} />}
-        {/* <ChampionCard champion={currentChampion} /> */}
+        {index == undefined ? (
+          // overflow:"hidden"
+          <div className="champions">
+            {champions.map((champion) => (
+              <img src={champion.image} />
+            ))}
+          </div>
+        ) : (
+          <ChampionCard champion={currentChampion} />
+        )}
+        {
+          //   {champions.map((champion) => (
+          //     <getChampions
+          //       champion={
+          //         "https://ddragon.leagueoflegends.com/cdn/img/champion/loading/" +
+          //         champion.id +
+          //         "_0.jpg"
+          //       }
+          //     />
+          //   ))}
+        }
       </div>
 
       {/* TODO: Refencence, css: flex-wrap */}
-      {/* <div className="champions">
-        {champions.map((champion) => (
-          <ChampionCard champion={champion} key={champion.id} />
-        ))}
-      </div> */}
+      {/* {
+        <div className="champions">
+          {champions.map((champion) => (
+            <ChampionCard champion={champion} key={champion.id} />
+          ))}
+        </div>
+      } */}
     </div>
   );
 }
