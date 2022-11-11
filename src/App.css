@@ -72,6 +72,10 @@
   object-fit: contain;
 }
 
+.photo:hover {
+  transform: scale(1.3);
+}
+
 .filterRoles {
   display: flex;
   flex-direction: column;
