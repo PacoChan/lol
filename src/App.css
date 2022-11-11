@@ -64,11 +64,14 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  height: 100vh;
+  overflow: hidden;
 }
 .photo {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  height: 300px;
 }
 
 .filterRoles {
