@@ -64,7 +64,11 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  min-width: 20 vw;
+}
+.photo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .filterRoles {

@@ -105,7 +105,9 @@ function App() {
           // overflow:"hidden"
           <div className="champions">
             {champions.map((champion) => (
-              <img src={champion.image} />
+              <div className="photo">
+                <img src={champion.image} />
+              </div>
             ))}
           </div>
         ) : (
