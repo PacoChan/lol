@@ -68,10 +68,8 @@
   overflow: hidden;
 }
 .photo {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  height: 300px;
+  width: 50px;
+  object-fit: contain;
 }
 
 .filterRoles {
